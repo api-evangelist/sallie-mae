@@ -1,0 +1,49 @@
+aid: sallie-mae
+url: https://raw.githubusercontent.com/api-evangelist/sallie-mae/refs/heads/main/apis.yml
+name: Sallie Mae Bank
+kind: company
+description: >-
+  Sallie Mae Bank is a Utah state-chartered industrial bank (industrial loan
+  company) founded on November 28, 2005 and headquartered in Salt Lake City,
+  Utah, operating as the FDIC-insured banking subsidiary (FDIC cert #58177) of
+  SLM Corporation (NASDAQ SLM), the publicly traded, S&P 400 consumer-finance
+  company best known as the largest originator of private student loans in the
+  United States. Beyond student and education lending, the bank offers retail
+  deposit products including high-yield savings accounts, money market
+  accounts, and certificates of deposit through salliemae.com. Sallie Mae Bank
+  does not operate a first-party public developer program - there is no
+  developer.salliemae.com portal, no api.salliemae.com host, and no published
+  OpenAPI/Swagger definitions. Consumer account and transaction data is
+  reachable only on a permissioned basis through third-party data aggregators
+  (historically Plaid), and no first-party FDX data-access API or published
+  CFPB Section 1033 data-rights posture could be confirmed. This is an
+  identity-only, aggregator-access record reflecting the honest reality that
+  this institution exposes no public API surface.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Industrial Bank
+- Student Loans
+- Savings
+- Consumer Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.salliemae.com/
+- type: TermsOfService
+  url: https://www.salliemae.com/legal/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.salliemae.com/legal/privacy-policies-and-notices/
+- type: GitHubOrganization
+  url: https://github.com/SallieMae
+- type: LinkedIn
+  url: https://www.linkedin.com/company/salliemae
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

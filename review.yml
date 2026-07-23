@@ -1,0 +1,80 @@
+aid: sallie-mae
+name: Sallie Mae Bank
+review:
+  question: Does Sallie Mae Bank expose a public first-party developer API, downloadable OpenAPI, or an FDX/1033 data-access surface?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Sallie Mae Bank exposes no public first-party developer API. It is a
+    Utah state-chartered industrial bank (industrial loan company, FDIC cert
+    #58177), the banking subsidiary of SLM Corporation (NASDAQ: SLM), focused
+    on private student lending and retail deposit products (HYSA, money
+    market, CDs). No developer portal exists: DNS lookups for
+    developer.salliemae.com and api.salliemae.com fail (no such host), and the
+    public salliemae.com site presents no "Developers" or "APIs" surface. No
+    downloadable OpenAPI/Swagger definition was found and none was harvested.
+    The github.com/SallieMae organization exists but has zero public
+    repositories. Consumer account and transaction data is reachable only on a
+    permissioned basis through third-party aggregators (historically Plaid,
+    whose Sallie Mae connection has been reported as deprecated). No
+    first-party FDX-conformant data-access API and no published CFPB Section
+    1033 data-rights posture could be confirmed. The honest posture is
+    aggregator-only access with no public API surface.
+  developerPortal:
+    exists: false
+    probed:
+      - url: https://developer.salliemae.com
+        status: DNS_ENOTFOUND
+      - url: https://api.salliemae.com
+        status: DNS_ENOTFOUND
+      - url: https://www.salliemae.com
+        status: 200
+  openapi:
+    harvested: false
+    provenance: none
+    note: No public OpenAPI/Swagger definition is published by Sallie Mae Bank.
+  authModel:
+    firstParty: none
+    note: No first-party API authentication model (OAuth2/OIDC/API-key/mTLS) is documented because no first-party API exists.
+  openFinance:
+    fdxParticipant: unconfirmed
+    section1033Posture: unpublished
+    aggregatorAccess: true
+    aggregators:
+      - name: Plaid
+        note: Historically supported; the Sallie Mae connection has been reported as deprecated/no longer supported.
+    note: |
+      Data access, where available, is aggregator-mediated (consumer-permissioned)
+      rather than through a bank-operated FDX API. No bilateral data-access
+      agreement, Akoya/FDX endpoint, or published 1033 program was found.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST API is documented.
+    - protocol: FDX
+      documented: false
+      note: No first-party FDX data-access API confirmed.
+sources:
+  - url: https://www.salliemae.com/
+    type: Website
+    note: Public consumer banking site; no developer or API section.
+  - url: https://github.com/SallieMae
+    type: GitHubOrganization
+    note: Organization exists with 0 public repositories.
+  - url: https://en.wikipedia.org/wiki/Sallie_Mae
+    type: Reference
+    note: Company background - SLM Corporation, NASDAQ SLM, student lending, retail banking subsidiary.
+  - url: https://fdicbanksinsured.com/banklist/58177-Sallie-Mae-Bank/
+    type: Reference
+    note: FDIC cert #58177; Utah industrial bank charter; Salt Lake City HQ.
+  - url: https://www.openbankingtracker.com/plaid/sallie-mae
+    type: Reference
+    note: Documents aggregator (Plaid) access path to Sallie Mae accounts.
+actions:
+  status: built-stub
+  reason: |
+    Identity-only record. No public first-party API, no downloadable spec, and
+    aggregator-only data access. Recorded honestly with probe statuses; nothing
+    fabricated.
