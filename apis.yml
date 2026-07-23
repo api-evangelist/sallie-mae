@@ -34,6 +34,8 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/sallie-mae-domain-security.yml
 - type: Website
   url: https://www.salliemae.com/
 - type: TermsOfService
@@ -44,6 +46,8 @@ common:
   url: https://github.com/SallieMae
 - type: LinkedIn
   url: https://www.linkedin.com/company/salliemae
+- type: Blog
+  url: https://www.salliemae.com/resources/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
