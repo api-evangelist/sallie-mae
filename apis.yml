@@ -1,5 +1,8 @@
 aid: sallie-mae
 url: https://raw.githubusercontent.com/api-evangelist/sallie-mae/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "This is an identity-only, aggregator-access record reflecting the honest reality that this institution exposes no public API surface."
 name: Sallie Mae Bank
 kind: company
 description: >-
